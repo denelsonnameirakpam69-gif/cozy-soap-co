@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3e9">
+  <meta name="description" content="Cozy Soap Co. — small-batch handmade soaps for everyday rituals.">
+  <title>Cozy Soap Co. — A softer daily ritual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">Small-batch soaps, made with care <span aria-hidden="true">✳</span> A little everyday luxury</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Cozy Soap Co. home">
+      <span class="brand-mark" aria-hidden="true">✳</span>
+      <span><strong>cozy soap co.</strong><small>HANDMADE · HEARTFELT</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="#shop">Shop soaps</a><a href="#story">Our story</a><a href="#values">Our approach</a>
+    </nav>
+    <button class="cart-trigger" id="openCart" aria-label="Open shopping cart">Bag <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> YOUR NEW BATHROOM FAVOURITE</p>
+        <h1>A softer kind<br>of <em>everyday.</em></h1>
+        <p class="hero-text">Thoughtfully made bars for slow mornings, long showers, and little moments that feel like yours.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#shop">Explore the soaps <span>↗</span></a><a class="text-link" href="#story">Meet Cozy Soap Co.</a></div>
+        <div class="hero-note"><span class="note-icon">✳</span><span><strong>Made in small batches</strong><small>Simple rituals. Thoughtful details.</small></span></div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Handmade soap bars styled with botanicals">
+        <div class="sun-disc"></div>
+        <div class="hero-photo"></div>
+        <div class="round-stamp">A LITTLE<br>MORE<br><i>cozy</i> ✳</div>
+        <div class="hero-caption">THE DAILY RITUAL COLLECTION</div>
+      </div>
+    </section>
+
+    <section class="trust-strip" id="values">
+      <div><span>✳</span><p><strong>Small-batch making</strong><small>Made with attention to detail</small></p></div>
+      <div><span>❋</span><p><strong>Ingredient transparency</strong><small>Know what goes on your skin</small></p></div>
+      <div><span>♡</span><p><strong>Everyday rituals</strong><small>Little moments of comfort</small></p></div>
+    </section>
+
+    <section class="shop-section section-pad" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE SOAP SHELF</p><h2>Find your <em>favourite.</em></h2></div>
+        <p>Pick a bar for your daily routine, or make a little bundle for someone you love.</p>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="disclaimer">Product names, descriptions, ingredients and prices are starter examples. Please update them to match your actual soaps before publishing.</p>
+    </section>
+
+    <section class="story-section section-pad" id="story">
+      <div class="story-image" role="img" aria-label="Natural soap and botanical ingredients"></div>
+      <div class="story-copy"><p class="eyebrow">A NOTE FROM OUR LITTLE STUDIO</p><h2>Made slowly.<br><em>Enjoyed daily.</em></h2><p>Cozy Soap Co. is built around a simple idea: everyday care can feel special without being complicated. Each bar is an invitation to pause, take a breath, and enjoy the small things.</p><p>We believe in thoughtful making, clear ingredient information, and products that feel right at home beside your sink.</p><a href="#shop" class="text-link">Find your everyday bar ↗</a></div>
+    </section>
+
+    <section class="quote-section"><span>✳</span><p>“Make room for little rituals.”</p><small>THE COZY WAY</small></section>
+
+    <section class="newsletter section-pad">
+      <div><p class="eyebrow">A LITTLE NOTE FROM US</p><h2>Stay in the <em>loop.</em></h2><p>New bars, restocks, and small things worth sharing.</p></div>
+      <form id="newsletterForm" class="newsletter-form"><label class="sr-only" for="newsletterEmail">Your email address</label><input id="newsletterEmail" type="email" placeholder="Your email address" required><button class="button button-dark" type="submit">Keep me posted ↗</button><small id="newsletterMessage">Demo form: connect an email marketing service to collect subscriptions.</small></form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">✳</span><span><strong>cozy soap co.</strong><small>HANDMADE · HEARTFELT</small></span></a>
+    <p>Everyday care, made a little cozier.</p>
+    <div class="footer-links"><a href="#shop">Shop</a><a href="#story">Our story</a><a href="#" id="instagramLink">Instagram</a><a href="#" id="whatsappLink">WhatsApp</a></div>
+    <small>© <span id="year"></span> Cozy Soap Co. Please update contact links and policies before launch.</small>
+  </footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-modal="true" role="dialog" aria-hidden="true">
+    <div class="drawer-header"><div><p class="eyebrow">YOUR LITTLE BUNDLE</p><h2>Your bag <span id="drawerCount">(0)</span></h2></div><button id="closeCart" class="icon-button" aria-label="Close cart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div id="emptyCart" class="empty-cart"><span>✳</span><p>Your bag is waiting for something lovely.</p><button class="text-link" id="browseProducts">Explore the soaps ↗</button></div>
+    <div class="cart-bottom" id="cartBottom" hidden><div class="subtotal"><span>Subtotal</span><strong id="subtotal">₹0</strong></div><small>Shipping and final details can be confirmed at checkout.</small><button class="button button-dark checkout-button" id="checkoutButton">Continue to checkout ↗</button></div>
+  </aside>
+
+  <div class="modal-wrap" id="checkoutModal" hidden>
+    <div class="modal-backdrop" data-close-checkout></div>
+    <section class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+      <button class="icon-button modal-close" data-close-checkout aria-label="Close checkout">×</button>
+      <p class="eyebrow">ALMOST YOURS</p><h2 id="checkoutTitle">Checkout</h2>
+      <p class="checkout-intro">Enter your details to prepare your order. This starter site does not process online payments.</p>
+      <form id="checkoutForm">
+        <div class="form-row"><label for="customerName">Full name</label><input id="customerName" name="name" autocomplete="name" required></div>
+        <div class="form-row"><label for="customerPhone">Phone number</label><input id="customerPhone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="form-row"><label for="customerEmail">Email (optional)</label><input id="customerEmail" name="email" type="email" autocomplete="email"></div>
+        <div class="form-row"><label for="customerAddress">Delivery address</label><textarea id="customerAddress" name="address" rows="3" autocomplete="street-address" required></textarea></div>
+        <div class="form-row"><label for="customerNotes">Order notes (optional)</label><textarea id="customerNotes" name="notes" rows="2" placeholder="Any delivery notes?"></textarea></div>
+        <div class="checkout-total"><span>Order subtotal</span><strong id="checkoutSubtotal">₹0</strong></div>
+        <button class="button button-dark checkout-button" type="submit">Prepare order via WhatsApp ↗</button>
+        <small class="privacy-note">Your details will be placed in a WhatsApp message only when you submit. Do not use this demo until you have configured your business WhatsApp number.</small>
+      </form>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
